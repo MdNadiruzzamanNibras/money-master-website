@@ -22,9 +22,16 @@ function balanceTotal(){
     return income;
 }
 
-function saveTotal(){
-    const
-}
+ function saveTotal(){
+     const saveInput = document.getElementById('save').value;
+     const save = parseFloat(saveInput);
+     const saveRate = save/100;
+     const saveAmount = income * saveRate;
+     document.getElementById('saveing-amunt').innerText=saveAmount;
+ }
 document.getElementById('calculate').addEventListener('click', function(){
  balanceTotal();
+});
+document.getElementById('save-btn').addEventListener('click', function(){
+    saveTotal()
 });
