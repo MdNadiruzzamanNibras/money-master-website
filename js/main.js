@@ -1,6 +1,7 @@
 
 
-// total expense & total balance 
+//  expense list & total expense
+
 function expenseTotal(){
     const food =document.getElementById('food').value;
      const foodCost = parseFloat(food);
@@ -22,8 +23,11 @@ function expenseTotal(){
       }
      const totalExpense = foodCost + rentCost +clothCost;
      document.getElementById('total-expense').innerText =totalExpense;
-    
-return totalExpense}
+     return totalExpense}
+
+
+
+//  income & total balance 
 
     function balanceTotal()
     {const totalExpense=expenseTotal();
@@ -44,6 +48,9 @@ return totalExpense}
        return income, balance;
 }
 
+
+
+// total save 
  function saveTotal(){
      const saveInput = document.getElementById('save').value;
      const save = parseFloat(saveInput);
@@ -67,10 +74,17 @@ return totalExpense}
       document.getElementById('remaining-balance').innerText = remainingBalance;
       console.log(remainingBalance);
     } 
+
+
+//  calculate button    
 document.getElementById('calculate').addEventListener('click', function(){
  balanceTotal();
 
 });
+
+
+// save button 
+
 document.getElementById('save-btn').addEventListener('click', function(){
     saveTotal();
 });
